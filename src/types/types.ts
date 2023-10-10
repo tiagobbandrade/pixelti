@@ -1,12 +1,14 @@
 import { Dispatch, SetStateAction } from "react"
 
+export type DeviceT = {
+    _device: string,
+    modelId: string
+}[]
+
 export type GatewayDataT = {
-    _id: string,
+    _id?: string,
     name: string,
-    devices: {
-        _device: string,
-        modelId: string
-    }[]
+    devices: DeviceT
 }
 
 export type ModalContextT = {
