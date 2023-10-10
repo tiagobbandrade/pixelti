@@ -1,3 +1,4 @@
+import { ModalContextProvider } from '@/contexts/ModalContext'
 import './globals.css'
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
@@ -16,7 +17,11 @@ export default function RootLayout({
 }) {
   return (
     <html lang="pt-br">
-      <body className={poppins.className}>{children}</body>
+      <body className={poppins.className}>
+        <ModalContextProvider>
+          {children}
+        </ModalContextProvider>
+      </body>
     </html>
   )
 }
