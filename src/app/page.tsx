@@ -13,7 +13,7 @@ export default function Home() {
           <Searchbar />
       </header>
       {/* <Sidebar /> */}
-      <main className='py-8 flex flex-col items-center justify-center gap-4'>
+      <main className='py-8 px-16 grid grid-cols-auto justify-items-center gap-4'>
         <GatewayCard gatewayName='Gateway 1' />
         <GatewayCard gatewayName='Gateway 2' />
         <GatewayCard gatewayName='Gateway 3' />
