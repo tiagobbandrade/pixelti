@@ -14,7 +14,10 @@ export default function Home() {
           <button className='p-1 border-none outline-none bg-transparent xl:hidden'>
             <BiMenu className='w-9 h-9'/>
           </button>
-            <Searchbar />
+            <div className='flex flex-col w-full xl:gap-3'>
+              <h2 className='text-[30px] hidden xl:inline-block'>Gateways</h2>
+              <Searchbar />
+            </div>
         </header>
         <main className='py-8 px-16 grid grid-cols-auto justify-items-center gap-6 xl:px-0'>
           <GatewayCard gatewayName='Gateway 1' />
