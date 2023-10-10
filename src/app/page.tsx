@@ -14,6 +14,9 @@ export default function Home() {
 
   return (
     <div className="px-8 py-6 relative xl:px-0 xl:py-0 xl:flex">
+      <div className='hidden xl:block'> {/* Obrigando a aparecer em telas maiores que 1280px*/}
+        <Sidebar />
+      </div>
       {showSidebar && <Sidebar onClick={changeVisibilityOfSidebar}/>}
       <div className='flex flex-col w-full p-8'>
         <header className="flex items-center justify-center w-full gap-4">
