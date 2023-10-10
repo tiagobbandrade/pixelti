@@ -1,6 +1,6 @@
 import { AiOutlineClose } from 'react-icons/ai'
 import { useModalContext } from '@/contexts/ModalContext'
-import DeviceCard from "./DeviceCard"
+import DeviceCard from "../device/DeviceCard"
 
 export function GatewayModal(){
     const modalContext = useModalContext();

@@ -1,9 +1,9 @@
 'use client'
 import { BiMenu } from 'react-icons/bi'
 import { Searchbar } from '@/components/Searchbar'
-import { GatewayGrid } from '@/components/device/GatewayGrid'
+import { GatewayGrid } from '@/components/gateway/GatewayGrid'
 import { Sidebar } from '@/components/Sidebar'
-import { GatewayModal } from '@/components/device/GatewayModal'
+import { GatewayModal } from '@/components/gateway/GatewayModal'
 import { useModalContext } from '@/contexts/ModalContext'
 import { useState } from 'react'
 

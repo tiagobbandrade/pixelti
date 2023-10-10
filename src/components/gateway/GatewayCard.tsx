@@ -1,8 +1,8 @@
 import { BsArrowRight } from 'react-icons/bs' 
-import Image from "next/image"
-import gatewayImage from '../../public/gateway-image.svg'
 import { useModalContext } from '@/contexts/ModalContext'
 import { DeviceT } from '@/types/types';
+import Image from "next/image"
+import gatewayImage from '../../../public/gateway-image.svg'
 
 
 export function GatewayCard({name, devices}: {name: string, devices: DeviceT}){

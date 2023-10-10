@@ -1,5 +1,5 @@
 import Image from "next/image";
-import smartPlug from '../../public/smart-plug.png'
+import smartPlug from '../../../public/smart-plug.png'
 
 export default function DeviceCard({modelId, _device}: {modelId: string, _device: string}){
     return (
