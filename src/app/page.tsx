@@ -18,7 +18,7 @@ export default function Home() {
         <Sidebar />
       </div>
       {showSidebar && <Sidebar onClick={changeVisibilityOfSidebar}/>}
-      <div className='flex flex-col w-full p-8'>
+      <div className='flex flex-col w-full'>
         <header className="flex items-center justify-center w-full gap-4">
           <button 
             onClick={changeVisibilityOfSidebar} 
