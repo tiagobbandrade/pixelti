@@ -6,7 +6,7 @@ type GatewayCardT = {
     gatewayName: string
 }
 
-export default function GatewayCard({gatewayName}: GatewayCardT){
+export function GatewayCard({gatewayName}: GatewayCardT){
     return (
         <div className="max-w-[220px] px-9 py-11 border border-zinc-400 shadow-sm shadow-zinc-400 rounded-2xl flex flex-col items-center justify-center gap-3">
             <Image src={gatewayImage} alt="Imagem ilustrando um gateway"/>
