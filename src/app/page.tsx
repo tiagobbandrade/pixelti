@@ -4,6 +4,7 @@ import { Searchbar } from './components/Searchbar'
 import { GatewayCard } from './components/GatewayCard'
 import { Sidebar } from './components/Sidebar'
 import { useState } from 'react'
+import { GatewayModal } from './components/GatewayModal'
 
 export default function Home() {
   const [showSidebar, setShowSidebar] = useState<boolean>(false);
@@ -14,6 +15,7 @@ export default function Home() {
 
   return (
     <div className="px-8 py-6 relative xl:px-0 xl:py-0 xl:flex">
+      <GatewayModal name='Gateway 1'/>
       <div className='hidden xl:block'> {/* Obrigando a aparecer em telas maiores que 1280px*/}
         <Sidebar />
       </div>

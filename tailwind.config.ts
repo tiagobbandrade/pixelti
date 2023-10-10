@@ -9,7 +9,8 @@ const config: Config = {
   theme: {
     extend: {
       gridTemplateColumns: {
-        'auto': 'repeat(auto-fit, minmax(220px, 1fr))'
+        'auto': 'repeat(auto-fit, minmax(192px, 1fr))',
+        'modal': 'repeat(auto-fit, minmax(175px, 1fr))'
       }
     },
   },
