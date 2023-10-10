@@ -6,8 +6,8 @@ import { BiLeftArrow } from 'react-icons/bi';
 
 export function Sidebar({onClick}: {onClick?: () => void}){
     return(
-        <div className='fixed top-0 left-0 h-screen w-full flex z-10 xl:sticky xl:min-w-[320px]'>
-            <nav className="max-w-[232px] h-full w-full py-8 px-6 flex flex-col items-center justify-between bg-zinc-900 z-10 xl:min-w-[320px]">
+        <div className='fixed top-0 left-0 h-full w-full flex z-10 xl:sticky xl:min-w-[320px]'>
+            <nav className="max-w-[232px] h-screen w-full py-8 px-6 flex flex-col items-center justify-between bg-zinc-900 z-10 xl:min-w-[320px]">
                 <Image src={PixeltiLogo} alt="PixelTi Logo" priority/>
                 <button 
                     onClick={onClick} 
