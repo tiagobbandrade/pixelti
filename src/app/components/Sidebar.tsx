@@ -6,7 +6,7 @@ import AvatarImage from '../../../public/profile-avatar.png'
 
 export function Sidebar({onClick, isHidden}: {onClick?: () => void, isHidden?: boolean}){
     return(
-        <div className={`${isHidden ? 'hidden' : 'block'} fixed top-0 left-0 h-full w-full flex z-10 xl:sticky xl:min-w-[320px] xl:block`}>
+        <div className={`${isHidden ? 'hidden' : 'block'} fixed top-0 left-0 h-full w-full flex z-10 xl:sticky xl:w-[320px] xl:block`}>
             <nav className="max-w-[232px] h-full w-full py-8 px-6 flex flex-col items-center justify-between bg-zinc-900 z-10 xl:min-w-[320px] xl:h-screen">
                 <Image src={PixeltiLogo} alt="PixelTi Logo" priority/>
                 <button 
