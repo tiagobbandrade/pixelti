@@ -1,3 +1,4 @@
+'use client'
 import { GatewayDataT, ModalContextT } from "@/types/types";
 import { ReactNode, useContext, useState } from "react";
 import { createContext } from "react";

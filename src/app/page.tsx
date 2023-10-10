@@ -1,25 +1,25 @@
 'use client'
 import { BiMenu } from 'react-icons/bi'
-import { GatewayModal } from '../components/GatewayModal'
-import { Searchbar } from '../components/Searchbar'
-import { Sidebar } from '../components/Sidebar'
+import { Searchbar } from '@/components/Searchbar'
+import { GatewayGrid } from '@/components/device/GatewayGrid'
+import { Sidebar } from '@/components/Sidebar'
+import { GatewayModal } from '@/components/device/GatewayModal'
+import { useModalContext } from '@/contexts/ModalContext'
 import { useState } from 'react'
-import { GatewayCard } from '@/components/GatewayCard'
 
 export default function Home() {
   const [showSidebar, setShowSidebar] = useState<boolean>(false);
-  const [showModal, setShowModal] = useState<boolean>(false);
+  const modalContext = useModalContext();
 
   function changeVisibilityOfSidebar(){
     setShowSidebar(previousValue => !previousValue)
   }
-  function toggleModal(){
-    setShowModal(previousValue => !previousValue)
-  }
-
+  
   return (
-    <div className={`${showSidebar || showModal ? 'overflow-hidden' : 'overflow-auto'} px-8 py-6 relative xl:px-0 xl:py-0 xl:flex`}>
-      {showModal && <GatewayModal closeModal={toggleModal} name='Gateway 1'/>}
+    <div 
+      className={`${showSidebar || modalContext?.isOpen ? 'overflow-hidden' : 'overflow-auto'} px-8 py-6 relative xl:px-0 xl:py-0 xl:flex`}
+    >
+      {modalContext?.isOpen && <GatewayModal />}
       <Sidebar onClick={changeVisibilityOfSidebar} isHidden={showSidebar}/>
       <div className='flex flex-col w-full xl:p-8'>
         <header className="flex items-center justify-center w-full gap-4">
@@ -34,12 +34,7 @@ export default function Home() {
               <Searchbar />
             </div>
         </header>
-        <main className='py-8 px-16 grid grid-cols-auto justify-items-center gap-6 xl:px-0'>
-          <GatewayCard openModal={toggleModal} gatewayName='Gateway 1' />
-          <GatewayCard openModal={toggleModal} gatewayName='Gateway 1' />
-          <GatewayCard openModal={toggleModal} gatewayName='Gateway 1' />
-          <GatewayCard openModal={toggleModal} gatewayName='Gateway 1' />
-        </main>
+        <GatewayGrid />
       </div>
     </div>
   )

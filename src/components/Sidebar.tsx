@@ -1,8 +1,8 @@
 import { FiLogOut } from 'react-icons/fi'
 import { BiLeftArrow } from 'react-icons/bi';
 import Image from "next/image";
-import PixeltiLogo from '../../../public/pixelti-logo.png'
-import AvatarImage from '../../../public/profile-avatar.png'
+import PixeltiLogo from '../../public/pixelti-logo.png'
+import AvatarImage from '../../public/profile-avatar.png'
 
 export function Sidebar({onClick, isHidden}: {onClick?: () => void, isHidden?: boolean}){
     return(
