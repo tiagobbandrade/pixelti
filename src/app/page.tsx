@@ -1,5 +1,6 @@
 import { BiMenu } from 'react-icons/bi'
 import { Searchbar } from './components/Searchbar'
+import GatewayCard from './components/GatewayCard'
 
 export default function Home() {
   return (
@@ -10,6 +11,12 @@ export default function Home() {
         </button>
           <Searchbar />
       </header>
+      <main className='py-8 flex flex-col items-center justify-center gap-4'>
+        <GatewayCard gatewayName='Gateway 1' />
+        <GatewayCard gatewayName='Gateway 2' />
+        <GatewayCard gatewayName='Gateway 3' />
+        <GatewayCard gatewayName='Gateway 4' />
+      </main>
     </div>
   )
 }
