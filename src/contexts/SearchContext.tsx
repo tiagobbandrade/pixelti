@@ -16,6 +16,6 @@ export function SearchContextProvider({children}: {children: ReactNode}){
     )
 }
 
-export function useModalContext(){
+export function useSearchContext(){
     return useContext(SearchContext)
 }
