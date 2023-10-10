@@ -8,18 +8,19 @@ import { GatewayModal } from './components/GatewayModal'
 
 export default function Home() {
   const [showSidebar, setShowSidebar] = useState<boolean>(false);
+  const [showModal, setShowModal] = useState<boolean>(false);
 
   function changeVisibilityOfSidebar(){
     setShowSidebar(previousValue => !previousValue)
   }
+  function toggleModal(){
+    setShowModal(previousValue => !previousValue)
+  }
 
   return (
     <div className="px-8 py-6 relative xl:px-0 xl:py-0 xl:flex">
-      <GatewayModal name='Gateway 1'/>
-      <div className='hidden xl:block'> {/* Obrigando a aparecer em telas maiores que 1280px*/}
-        <Sidebar />
-      </div>
-      {showSidebar && <Sidebar onClick={changeVisibilityOfSidebar}/>}
+      {showModal && <GatewayModal closeModal={toggleModal} name='Gateway 1'/>}
+      <Sidebar onClick={changeVisibilityOfSidebar} isHidden={showSidebar}/>
       <div className='flex flex-col w-full xl:p-8'>
         <header className="flex items-center justify-center w-full gap-4">
           <button 
@@ -34,10 +35,10 @@ export default function Home() {
             </div>
         </header>
         <main className='py-8 px-16 grid grid-cols-auto justify-items-center gap-6 xl:px-0'>
-          <GatewayCard gatewayName='Gateway 1' />
-          <GatewayCard gatewayName='Gateway 2' />
-          <GatewayCard gatewayName='Gateway 3' />
-          <GatewayCard gatewayName='Gateway 4' />
+          <GatewayCard openModal={toggleModal} gatewayName='Gateway 1' />
+          <GatewayCard openModal={toggleModal} gatewayName='Gateway 1' />
+          <GatewayCard openModal={toggleModal} gatewayName='Gateway 1' />
+          <GatewayCard openModal={toggleModal} gatewayName='Gateway 1' />
         </main>
       </div>
     </div>
