@@ -17,3 +17,8 @@ export type ModalContextT = {
     gatewayData: GatewayDataT | undefined,
     setGatewayData: Dispatch<SetStateAction<GatewayDataT | undefined>>
 }
+
+export type SearchT = {
+    searchParams: string,
+    setSearchParams: Dispatch<SetStateAction<string>>
+}
