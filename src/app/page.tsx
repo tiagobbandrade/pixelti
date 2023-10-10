@@ -1,17 +1,26 @@
-// 'use client'
+'use client'
 import { BiMenu } from 'react-icons/bi'
 import { Searchbar } from './components/Searchbar'
 import { GatewayCard } from './components/GatewayCard'
 import { Sidebar } from './components/Sidebar'
+import { useState } from 'react'
 
 export default function Home() {
+  const [showSidebar, setShowSidebar] = useState<boolean>(false);
+
+  function changeVisibilityOfSidebar(){
+    setShowSidebar(previousValue => !previousValue)
+  }
 
   return (
     <div className="px-8 py-6 relative xl:px-0 xl:py-0 xl:flex">
-      <Sidebar />
+      {showSidebar && <Sidebar onClick={changeVisibilityOfSidebar}/>}
       <div className='flex flex-col w-full p-8'>
         <header className="flex items-center justify-center w-full gap-4">
-          <button className='p-1 border-none outline-none bg-transparent xl:hidden'>
+          <button 
+            onClick={changeVisibilityOfSidebar} 
+            className='p-1 border-none outline-none bg-transparent xl:hidden'
+          >
             <BiMenu className='w-9 h-9'/>
           </button>
             <div className='flex flex-col w-full xl:gap-3'>
