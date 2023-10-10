@@ -1,11 +1,10 @@
 'use client'
 import { BiMenu } from 'react-icons/bi'
-import { Searchbar } from './components/Searchbar'
-import { GatewayCard } from './components/GatewayCard'
-import { Sidebar } from './components/Sidebar'
+import { GatewayModal } from '../components/GatewayModal'
+import { Searchbar } from '../components/Searchbar'
+import { Sidebar } from '../components/Sidebar'
 import { useState } from 'react'
-import { GatewayModal } from './components/GatewayModal'
-import { GatewaysGrid } from './components/GatewaysGrid'
+import { GatewayCard } from '@/components/GatewayCard'
 
 export default function Home() {
   const [showSidebar, setShowSidebar] = useState<boolean>(false);
@@ -35,7 +34,12 @@ export default function Home() {
               <Searchbar />
             </div>
         </header>
-        <GatewaysGrid toggleModal={toggleModal}/>
+        <main className='py-8 px-16 grid grid-cols-auto justify-items-center gap-6 xl:px-0'>
+          <GatewayCard openModal={toggleModal} gatewayName='Gateway 1' />
+          <GatewayCard openModal={toggleModal} gatewayName='Gateway 1' />
+          <GatewayCard openModal={toggleModal} gatewayName='Gateway 1' />
+          <GatewayCard openModal={toggleModal} gatewayName='Gateway 1' />
+        </main>
       </div>
     </div>
   )
