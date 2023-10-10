@@ -18,7 +18,7 @@ export default function Home() {
   }
 
   return (
-    <div className="px-8 py-6 relative xl:px-0 xl:py-0 xl:flex">
+    <div className={`${showSidebar || showModal ? 'overflow-hidden' : 'overflow-auto'}px-8 py-6 relative xl:px-0 xl:py-0 xl:flex`}>
       {showModal && <GatewayModal closeModal={toggleModal} name='Gateway 1'/>}
       <Sidebar onClick={changeVisibilityOfSidebar} isHidden={showSidebar}/>
       <div className='flex flex-col w-full xl:p-8'>
