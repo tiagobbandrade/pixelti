@@ -2,7 +2,7 @@ import './globals.css'
 import type { Metadata } from 'next'
 import { Poppins } from 'next/font/google'
 
-const poppins = Poppins({ subsets: ['latin'], style: 'normal', weight: ['400', '300', '800', '700'] })
+const poppins = Poppins({ subsets: ['latin'], style: 'normal', weight: ['400', '500', '800', '600'] })
 
 export const metadata: Metadata = {
   title: 'PixelTI - Gateways',
